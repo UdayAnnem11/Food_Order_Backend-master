@@ -34,7 +34,7 @@ exports.getTopRestaurants = (req, res, next) => {
   Restaurant.find()
     .populate("foods")
     .then((result) => {
-      res.status(200).json(result);
+      res.status(200).json("These are the top restaurants in the city");
     })
     .catch((err) => {
       return AppError.onError(res, "restaurant add error" + err);
@@ -58,7 +58,7 @@ exports.getFoodDetails = (req, res, next) => {
   const foodId = req.params.id;
   Food.findById(foodId)
     .then((result) => {
-      res.status(200).json(result);
+      res.status(200).json("These are food details");
     })
     .catch((err) => {
       err.statusCode = 503;
@@ -78,7 +78,7 @@ exports.getInThirtyMinutes = (req, res, next) => {
         .limit(ITEM_PER_PAGE);
     })
     .then((foods) => {
-      return res.status(200).json(foods);
+      return res.status(200).json("Food will be sent in 30 Minutes 'YEAHAY' ");
     })
     .catch((err) => {
       err.statusCode = 503;

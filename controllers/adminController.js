@@ -30,7 +30,7 @@ exports.addRestaurant = (req, res, next) => {
 exports.viewAllRestaurant = (req, res, next) => {
   Restaurant.find()
     .then((restaurants) => {
-      res.status(200).json(restaurants);
+      res.status(200).json("All Restaurants");
     })
     .catch((err) => {
       return AppError.onError(res, "restaurant add error" + err);
