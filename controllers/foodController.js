@@ -85,3 +85,11 @@ exports.getInThirtyMinutes = (req, res, next) => {
       next(err);
     });
 };
+
+
+exports.test = (req, res, next) => {
+  res.status(200).json({
+    message: "Food will be sent in 30 Minutes 'YEAHAY'",
+  });
+};
+

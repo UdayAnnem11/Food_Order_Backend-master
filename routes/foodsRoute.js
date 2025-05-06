@@ -7,6 +7,8 @@ const foodController = require("../controllers/foodController");
 /**
  * PUBLIC ROUTES
  */
+
+router.use("/test",foodController.test);
 router.get("/in-30-min", foodController.getInThirtyMinutes);
 
 router.get("/:id", foodController.getFoodDetails);
