@@ -55,7 +55,7 @@ app.use((error, req, res, next) => {
   res.status(status).json({ data: data });
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, ()=>{
   console.log(`MongoDB connected successfully to ${PORT}`);
 });
