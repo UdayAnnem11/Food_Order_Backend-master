@@ -43,20 +43,20 @@ router.post(
   userController.onLogin
 );
 
-router.put("/cart/:id/:qty", auth, userController.editCart);
+router.put("/cart/:id/:qty", userController.editCart);
 
-router.post("/cart/:id", auth, userController.addToCart);
+router.post("/cart/:id", userController.addToCart);
 
-router.get("/cart", auth, userController.getCart);
+router.get("/cart",  userController.getCart);
 
-router.get("/order", auth, userController.getOrder);
+router.get("/order", userController.getOrder);
 
-router.get("/order/:id", auth, userController.getSelectedOrder);
+router.get("/order/:id", userController.getSelectedOrder);
 
-router.post("/add-order", auth, userController.addOrder);
+router.post("/add-order",  userController.addOrder);
 
-router.get("/profile", auth, userController.viewProfile);
+router.get("/profile", userController.viewProfile);
 
-router.post("/address", auth, userController.editAddress);
+router.post("/address", userController.editAddress);
 
 module.exports = router;
